@@ -1,0 +1,82 @@
+header {
+  background-color: #0a0a0e;
+  padding: 20px 0;
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding-top: 0;
+}
+.brand {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.brand a {
+  color: #fff;
+  text-decoration: none;
+}
+.brand span {
+  color: crimson;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+nav ul li {
+  margin-left: 30px;
+  list-style: none;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  position: relative;
+  letter-spacing: 2px;
+  padding: 1rem 0;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  color: crimson;
+}
+nav ul li a::before,
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: crimson;
+  left: 0;
+  transform: scaleX(0);
+  transition: all .5s;
+}
+nav ul li a::before {
+  top: 0;
+  transform-origin: left;
+}
+nav ul li a::after {
+  bottom: 0;
+  transform-origin: right;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after,
+nav ul li a.active::before,
+nav ul li a.active::after {
+  transform: scaleX(1);
+}
+@keyframes slideIn {
+  from {}
+  to { transform:translateX(0); }
+}

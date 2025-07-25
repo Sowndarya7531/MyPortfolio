@@ -1,0 +1,223 @@
+.bodies{
+  margin: 0;
+  padding:0;
+  overflow-x: hidden;
+  background: #000;
+    color: #fff; 
+}
+section{
+    height: 100vh;
+}
+.homeh1{
+    margin: 0;
+    padding: 1px;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color:#f6f1f1;
+    font-size: 5rem;
+    font-family: sans-serif;
+    letter-spacing: 0.2rem;
+    
+}
+.homeh1 span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0px);
+    }
+}
+h1 span:nth-child(1){ animation-delay: 0.4s; }
+h1 span:nth-child(2){ animation-delay: 0.6s; }
+h1 span:nth-child(3){ animation-delay: 0.8s; }
+h1 span:nth-child(4){ animation-delay: 1s; }
+h1 span:nth-child(5){ animation-delay: 1.2s; }
+h1 span:nth-child(6){ animation-delay: 1.4s; }
+h1 span:nth-child(7){ animation-delay: 1.6s; }
+h1 span:nth-child(8){ animation-delay: 1.8s; }
+h1 span:nth-child(9){ animation-delay: 2s; }
+h1 span:nth-child(10){ animation-delay: 2.2s; }
+h1 span:nth-child(11){ animation-delay: 2.4s; }
+h1 span:nth-child(12){ animation-delay: 2.6s; }
+h1 span:nth-child(13){ animation-delay: 2.8s; }
+h1 span:nth-child(14){ animation-delay: 3s; }
+h1 span:nth-child(15){ animation-delay: 3.2s; }
+h1 span:nth-child(16){ animation-delay: 3.4s; }
+h1 span:nth-child(17){ animation-delay: 3.6s; }
+h1 span:nth-child(18){ animation-delay: 3.8s; }
+h1 span:nth-child(19){ animation-delay: 4s; }
+h1 span:nth-child(20){ animation-delay: 4.2s; }
+h1 span:nth-child(21){ animation-delay: 4.4s; }
+h1 span:nth-child(22){ animation-delay: 4.6s; }
+h1 span:nth-child(23){ animation-delay: 4.8s; }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: "Roboto Cn", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #ddd;
+}
+
+header {
+  width: 100%;
+  
+}
+
+.home-header {
+  height: 100vh; 
+}
+
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+nav{
+    padding-top: 5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+.brand{
+    font-size: 3rem;
+    font-weight: 300;
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+}
+.brand span{
+    color: crimson;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    list-style: none;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+}
+nav ul li:nth-child(1){
+    animation-delay: 0s;
+}
+nav ul li:nth-child(2){
+    animation-delay: .5s;
+}
+nav ul li:nth-child(3){
+    animation-delay: 1s;
+}
+nav ul li:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+nav ul li a{
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+    
+}
+nav ul li a.active {
+  color: crimson;
+  border-bottom: 2px solid crimson;
+}
+nav ul li a:last-child{
+    margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+content:'';
+position:absolute;
+width: 100%;
+height:2px;
+background-color: crimson;
+left:0;
+transform: scaleX(0);
+transition: all .5s;
+}
+nav ul li a::before{
+    top: 0;
+    transform-origin:left ;
+}
+nav ul li a::after{
+bottom: 0;  
+transform-origin:right ;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+transform: scaleX(1); 
+}
+@keyframes slideIn {
+    from{
+
+    }
+    to{
+        transform:translateX(0);
+    }
+}
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.home-subtitle {
+  position: absolute;
+  top: 62%;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ccc;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 5.2s; /* Adjust based on your name animation end */
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+

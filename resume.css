@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+ font-family: sans-serif;
+  background-color: #0a0a0e;
+  color: #f6f1f1;
+}
+
+/* Resume Section */
+.resume-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #e91e63;
+  margin-bottom: 40px;
+}
+
+.resume-preview {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
+}
+
+.resume-preview iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+/* Download Button */
+.download-btn-container {
+  margin-top: 30px;
+}
+
+.download-btn {
+  background: linear-gradient(to right, #e91e63, #ff4081);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.2);
+}
+
+.download-btn:hover {
+  background: #c2185b;
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-preview iframe {
+    height: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .resume-preview iframe {
+    height: 350px;
+  }
+}
