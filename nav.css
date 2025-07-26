@@ -1,43 +1,58 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
 header {
   background-color: #0a0a0e;
   padding: 20px 0;
   width: 100%;
 }
+
 .container {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
   padding: 0 20px;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
   font-size: 1.6rem;
-  padding-top: 0;
+  flex-wrap: wrap;
 }
+
 .brand {
   font-size: 2rem;
   font-weight: 300;
 }
+
 .brand a {
   color: #fff;
   text-decoration: none;
 }
+
 .brand span {
   color: crimson;
 }
+
+/* Navigation Links */
 nav ul {
   display: flex;
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
+
 nav ul li {
   margin-left: 30px;
-  list-style: none;
 }
+
 nav ul li a {
   color: #fff;
   text-decoration: none;
@@ -47,10 +62,12 @@ nav ul li a {
   letter-spacing: 2px;
   padding: 1rem 0;
 }
+
 nav ul li a:hover,
 nav ul li a.active {
   color: crimson;
 }
+
 nav ul li a::before,
 nav ul li a::after {
   content: '';
@@ -62,21 +79,80 @@ nav ul li a::after {
   transform: scaleX(0);
   transition: all .5s;
 }
+
 nav ul li a::before {
   top: 0;
   transform-origin: left;
 }
+
 nav ul li a::after {
   bottom: 0;
   transform-origin: right;
 }
+
 nav ul li a:hover::before,
 nav ul li a:hover::after,
 nav ul li a.active::before,
 nav ul li a.active::after {
   transform: scaleX(1);
 }
-@keyframes slideIn {
-  from {}
-  to { transform:translateX(0); }
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Home Section */
+.homeh1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  word-break: break-word;
+}
+
+.home-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0a0a0e;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0;
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    border-top: 1px solid #222;
+  }
 }
