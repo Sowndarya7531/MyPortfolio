@@ -1,44 +1,54 @@
-.bodies{
+.bodies {
   margin: 0;
-  padding:0;
+  padding: 0;
   overflow-x: hidden;
   background: #000;
-    color: #fff; 
+  color: #fff;
 }
-section{
-    height: 100vh;
+
+a {
+  text-decoration: none;
+  color: #ddd;
 }
-.homeh1{
-    margin: 0;
-    padding: 1px;
-    position: absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width: 100%;
-    text-align: center;
-    color:#f6f1f1;
-    font-size: 5rem;
-    font-family: sans-serif;
-    letter-spacing: 0.2rem;
-    
+
+section, .home-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px 40px; /* padding top for header space */
+  box-sizing: border-box;
 }
-.homeh1 span{
+
+.homeh1 {
+  text-align: center;
+  color: #f6f1f1;
+  font-size: 5rem;
+  font-family: sans-serif;
+  letter-spacing: 0.2rem;
+  margin: 0;
+}
+
+.homeh1 span {
+  opacity: 0;
+  display: inline-block;
+  animation: animate 1s linear forwards;
+}
+
+@keyframes animate {
+  0% {
     opacity: 0;
-    display: inline-block;
-    animation: animate 1s linear forwards;
+    transform: rotateY(90deg);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0px);
+  }
 }
-@keyframes animate{
-    0%{
-        opacity: 0;
-        transform: rotateY(90deg);
-        filter: blur(10px);
-    }
-    100%{
-        opacity: 1;
-        transform: rotateY(0deg);
-        filter: blur(0px);
-    }
-}
+
 h1 span:nth-child(1){ animation-delay: 0.4s; }
 h1 span:nth-child(2){ animation-delay: 0.6s; }
 h1 span:nth-child(3){ animation-delay: 0.8s; }
@@ -63,32 +73,17 @@ h1 span:nth-child(21){ animation-delay: 4.4s; }
 h1 span:nth-child(22){ animation-delay: 4.6s; }
 h1 span:nth-child(23){ animation-delay: 4.8s; }
 
-a{
-    text-decoration: none;
-    color: #ddd;
-}
-
-
-
-.home-header {
-  height: 100vh; 
-}
-
-
-
 .home-subtitle {
-  position: absolute;
-  top: 62%;
-  width: 100%;
+  margin-top: 20px;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #ccc;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
   opacity: 0;
   animation: fadeInUp 1s ease-in-out forwards;
-  animation-delay: 5.2s; /* Adjust based on your name animation end */
+  animation-delay: 5.2s;
 }
 
 @keyframes fadeInUp {
@@ -102,5 +97,20 @@ a{
   }
 }
 
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .homeh1 {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
 
+  .home-subtitle {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
 
+  .home-content {
+    padding-top: 120px; /* extra top space for mobile navbar */
+  }
+}
