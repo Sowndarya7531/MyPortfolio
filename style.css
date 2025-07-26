@@ -62,15 +62,7 @@ h1 span:nth-child(20){ animation-delay: 4.2s; }
 h1 span:nth-child(21){ animation-delay: 4.4s; }
 h1 span:nth-child(22){ animation-delay: 4.6s; }
 h1 span:nth-child(23){ animation-delay: 4.8s; }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html{
-    font-size: 10px;
-    font-family: "Roboto Cn", sans-serif;
-}
+
 a{
     text-decoration: none;
     color: #ddd;
