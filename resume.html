@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume</title>
+  <title>My Resume</title>
   <link rel="stylesheet" href="resume.css" />
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <div id="header-placeholder"></div>
-  <main class="resume-section">
+
+  <main class="resume-container">
     <h1 class="section-title"><i class="fas fa-file-alt"></i> My Resume</h1>
 
-    <div class="resume-preview">
-      <iframe src="./CHERUKURISOWNDARYAVATHI.pdf" frameborder="0"></iframe>
-    </div>
+    
 
-    <div class="download-btn-container">
-      <a href="./CHERUKURISOWNDARYAVATHI.pdf" download class="download-btn">
-        <i class="fas fa-download"></i> Download Resume
+    <!-- Action Buttons -->
+    <div class="button-group">
+      <a href="./CHERUKURISOWNDARYAVATHI.pdf" target="_blank" class="btn preview-btn">
+        <i class="fas fa-eye"></i> Preview
+      </a>
+      <a href="./CHERUKURISOWNDARYAVATHI.pdf" download class="btn download-btn">
+        <i class="fas fa-download"></i> Download
       </a>
     </div>
   </main>
+
   <script src="headerloader.js"></script>
 </body>
 </html>
