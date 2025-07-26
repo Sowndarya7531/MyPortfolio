@@ -5,28 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Resume</title>
   <link rel="stylesheet" href="resume.css" />
-  <link rel="stylesheet" href="nav.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
+  <!-- Header -->
   <div id="header-placeholder"></div>
 
+  <!-- Main Resume Section -->
   <main class="resume-container">
     <h1 class="section-title"><i class="fas fa-file-alt"></i> My Resume</h1>
 
-    
-
     <!-- Action Buttons -->
     <div class="button-group">
-      <a href="./CHERUKURISOWNDARYAVATHI.pdf" target="_blank" class="btn preview-btn">
+      <button class="btn preview-btn" onclick="openResumeModal()">
         <i class="fas fa-eye"></i> Preview
-      </a>
+      </button>
       <a href="./CHERUKURISOWNDARYAVATHI.pdf" download class="btn download-btn">
         <i class="fas fa-download"></i> Download
       </a>
     </div>
   </main>
 
+  <!-- Resume Modal Preview -->
+  <div id="resumeModal" class="modal">
+    <span class="close-btn" onclick="closeResumeModal()">&times;</span>
+    <div class="modal-content">
+      <iframe 
+        src="./CHERUKURISOWNDARYAVATHI.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+        frameborder="0"
+      ></iframe>
+    </div>
+  </div>
+
   <script src="headerloader.js"></script>
+  <script>
+    function openResumeModal() {
+      document.getElementById('resumeModal').style.display = 'flex';
+    }
+
+    function closeResumeModal() {
+      document.getElementById('resumeModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('resumeModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>
