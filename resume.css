@@ -1,69 +1,84 @@
 body {
   margin: 0;
   padding: 0;
- font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0a0a0e;
   color: #f6f1f1;
 }
 
-/* Resume Section */
-.resume-section {
-  padding: 60px 20px;
+.resume-container {
   text-align: center;
+  padding: 60px 20px;
 }
 
 .section-title {
   font-size: 2.5rem;
   color: #e91e63;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-.resume-preview {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
+/* Resume Image */
+.resume-image img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(233, 30, 99, 0.3);
+  transition: transform 0.3s ease;
 }
 
-.resume-preview iframe {
-  width: 100%;
-  height: 600px;
-  border: none;
+.resume-image img:hover {
+  transform: scale(1.02);
 }
 
-/* Download Button */
-.download-btn-container {
+/* Buttons */
+.button-group {
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.preview-btn {
+  background-color: #03a9f4;
+}
+
+.preview-btn:hover {
+  background-color: #0288d1;
 }
 
 .download-btn {
-  background: linear-gradient(to right, #e91e63, #ff4081);
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.2);
+  background-color: #e91e63;
 }
 
 .download-btn:hover {
-  background: #c2185b;
-  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+  background-color: #c2185b;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .resume-preview iframe {
-    height: 450px;
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2rem;
   }
-}
 
-@media (max-width: 500px) {
-  .resume-preview iframe {
-    height: 350px;
+  .btn {
+    width: 80%;
+    padding: 14px;
+  }
+
+  .resume-image img {
+    width: 90%;
   }
 }
