@@ -17,7 +17,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* Resume Image */
+/* Resume Image (Optional if you're showing preview only) */
 .resume-image img {
   max-width: 100%;
   width: 400px;
@@ -67,6 +67,54 @@ body {
   background-color: #c2185b;
 }
 
+/* Resume Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 800px;
+  height: 90%;
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255,255,255,0.1);
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #e91e63;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .section-title {
@@ -78,4 +126,17 @@ body {
     padding: 14px;
   }
 
-  
+  .resume-image img {
+    width: 90%;
+  }
+
+  .modal-content {
+    height: 80%;
+  }
+
+  .close-btn {
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+  }
+}
